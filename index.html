@@ -1,0 +1,115 @@
+<!doctype html>
+<html ng-app="presentation">
+<head>
+  <meta charset="utf-8">
+  <title>Custom Directives</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.1/css/reveal.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.1/css/theme/default.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6/lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="present">
+        <h1>Angular Build Pipeline</h1>
+        <p>by Nicholas Boll</p>
+      </section>
+      <section>
+        <h2>Who Am I?</h2>
+        <ul>
+          <li><a href="http://twitter.com/NicholasBoll">@NicholasBoll</a></li>
+          <li>nicholas.boll@gmail.com</li>
+          <li>I'm a Software Engineer at LogRhythm</li>
+          <li>I've been using AngularJS for about 1 year</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Why a build pipeline?</h2>
+        <li class="fragment">Checks (Ex: JSLint)</li>
+        <li class="fragment">Transpilers (Ex: CoffeeScript, Stylus)</li>
+        <li class="fragment">Easy development, optimized production</li>
+        <li class="fragment">Tests</li>
+      </section>
+      <section>
+        <h2>When should I start?</h2>
+        <li class="fragment">Whenever you want to stop wasting time!</li>
+      </section>
+      <section>
+        <section>
+          <h2>What are my options?</h2>
+        </section>
+        <section>
+          <h2>Grunt</h2>
+          <a href="http://gruntjs.com">
+            <img src="http://gruntjs.com/img/grunt-logo.png" border="0">
+          </a>
+        </section>
+        <section>
+          <h2>Gulp</h2>
+          <a href="http://gulpjs.com">
+            <img src="https://raw.github.com/gulpjs/artwork/master/gulp-2x.png" border="0">
+          </a>
+        </section>
+        <section>
+          <h2>Brunch, Broccoli, etc...</h2>
+        </section>
+      </section>
+      <section>
+        <h2>My favorite?</h2>
+        <li class="fragment">Gulp!</li>
+      </section>
+      <section>
+        <h2>Example pipeline</h2>
+        <ul>
+          <li class="fragment">Transpile CoffeeScript to JavaScript (<a href="https://github.com/wearefractal/gulp-coffee">gulp-coffee</a>)</li>
+          <li class="fragment">Transpile Stylus to CSS (<a href="https://github.com/stevelacy/gulp-stylus">gulp-stylus</a>)</li>
+          <li class="fragment">Annotate AngularJS (<a href="https://github.com/Kagami/gulp-ng-annotate">gulp-ng-annotate</a>)</li>
+          <li class="fragment">Template cache (<a href="https://github.com/jstuckey/gulp-gzip">gulp-angular-templatecache</a>)</li>
+          <li class="fragment">Concat resources (JS, CSS) (<a href="https://github.com/wearefractal/gulp-concat">gulp-concat</a>)</li>
+          <li class="fragment">Minify resources (JS, CSS, SVG, HTML, IMG, etc) (<a href="https://github.com/terinjokes/gulp-uglify">gulp-uglify</a>)</li>
+          <li class="fragment">GZip (<a href="https://github.com/jstuckey/gulp-gzip">gulp-gzip</a> faster than runtime compression)</li>
+          <li class="fragment">Inject scripts, styles, etc (<a href="https://github.com/klei/gulp-inject">gulp-inject</a>)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Sourcemaps</h2>
+        <ul>
+          <li class="fragment"><a href="https://github.com/floridoo/gulp-sourcemaps">gulp-sourcemaps</a></li>
+          <li class="fragment">Maps transforms from each stream transform!</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Optimizing for dev</h2>
+        <ul>
+          <li class="fragment">Process only changed files</li>
+          <li class="fragment"><a href="https://github.com/sindresorhus/gulp-changed">gulp-changed</a></li>
+          <li class="fragment"><a href="https://github.com/tschaub/gulp-newer">gulp-newer</a></li>
+          <li class="fragment"><a href="https://github.com/wearefractal/gulp-cached">gulp-cached</a></li>
+          <li class="fragment"><a href="https://github.com/ahaurw01/gulp-remember">gulp-remember</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Some real projects:</h2>
+      </section>
+      <section>
+        <h2>Questions?</h2>
+      </section>
+    </div>
+  </div>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.1/lib/js/head.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.1/js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      dependencies: [
+        { src: 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ],
+      history: true
+    });
+  </script>
+</body>
+</html>
